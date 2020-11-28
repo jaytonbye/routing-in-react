@@ -10,19 +10,17 @@ class Film extends Component {
         }
     }
     
-    componentDidMount(){
-        console.log(this.props.match)
-    }
-
     render() {
         return (
             <Card style={{ width: '18rem' }}>
                 <Card.Body>
-                    <Card.Title><strong>{this.props.title}</strong></Card.Title>
-                    <Card.Subtitle>Directed by {this.props.director}</Card.Subtitle>
+                    <Card.Title><strong>{this.props.name}</strong></Card.Title>
                     <Card.Text>
-                        {this.props.description}<br />
-                        Id = {this.props.id}
+                        gender: {this.props.gender} <br />
+                        age: {this.props.age} <br />
+                        eye color: {this.props.eye_color} <br />
+                        hair color: {this.props.hair_color} <br />
+                        <a href={this.props.films}>films</a>
                     </Card.Text>
                 </Card.Body>
             </Card>
