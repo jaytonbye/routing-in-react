@@ -12,14 +12,12 @@ class Film extends Component {
     
     componentDidMount(){
         fetch(`https://ghibliapi.herokuapp.com${this.props.match.path}`)
-        .then(response=> response.json()
+        .then(response=> response.json())
         .then((obj)=>{
             this.setState({
                 film: obj
             })
         })
-        )
-        console.log(this.state)
     }
 
     render() {
@@ -31,6 +29,7 @@ class Film extends Component {
                     <Card.Text>
                         <br />
                         {this.state.film.description}
+                        <br />
                         <br />
                         Rotten Tomatoes Score: {this.state.film.rt_score}
                     </Card.Text>
