@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom'
 import Films from './Films'
-import Film from './Film'
 import People from './People'
 
 function App(props) {
@@ -18,7 +17,6 @@ function App(props) {
           <Route exact path='/' component={null} /> {/* is this the correct way to do the homepage? It works... */}
           <Route exact path='/films' component={Films} />
           <Route exact path='/people' component={People} />
-          <Route path='/films/:id' component={Film}/>
         </Switch>
       </Fragment>
     </Router>
